@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
-import { Check, Crown, Loader2, PartyPopper } from "lucide-react";
+import { Check, Crown, Loader2, PartyPopper, X } from "lucide-react";
 import { SectionTitle, Tag } from "./shared";
 
 type ModalState = "closed" | "loading" | "discount";
@@ -11,7 +11,13 @@ const premiumItems = [
   "Guia do Mágico Confiante",
   "Desafio de 7 Dias para o Grande Show",
   "Itens Mágicos para Imprimir",
+  "Acesso à comunidade de mágicos",
+  "+50 mágicas extras",
+  "Área de membros profissional",
+  "Acesso a todas as atualizações",
 ];
+
+const iscaMissing = premiumItems.slice(1);
 
 export function Offers() {
   const [modal, setModal] = useState<ModalState>("closed");
@@ -50,6 +56,21 @@ export function Offers() {
           <p className="mt-1 text-xs text-muted-foreground">
             Manual com 100 truques passo a passo
           </p>
+          <ul className="mt-3 flex flex-col gap-1.5">
+            <li className="flex items-start gap-2 text-sm">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-cta" />
+              <span>Manual com 100 truques passo a passo</span>
+            </li>
+            {iscaMissing.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2 text-sm text-muted-foreground"
+              >
+                <X className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+                <span className="line-through">{item}</span>
+              </li>
+            ))}
+          </ul>
           <p className="mt-3 font-display text-3xl font-extrabold">
             R$ 10<span className="text-sm font-bold">,00</span>
           </p>
