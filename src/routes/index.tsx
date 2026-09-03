@@ -1,24 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero, ScarcityBanner } from "@/components/landing/hero";
+import { Benefits, Inside, WhyBuy } from "@/components/landing/benefits";
+import { Bonuses, Feedbacks } from "@/components/landing/bonuses";
+import { Offers } from "@/components/landing/offers";
+import { Faq, Footer, Guarantee } from "@/components/landing/faq";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "100 Truques de Mágica Passo a Passo — 80% OFF Hoje" },
+      {
+        name: "description",
+        content:
+          "Manual digital com 100 truques de mágica explicados passo a passo + 4 bônus grátis. Aprenda em minutos e impressione qualquer pessoa. Garantia de 7 dias.",
+      },
+      {
+        property: "og:title",
+        content: "100 Truques de Mágica Passo a Passo — 80% OFF Hoje",
+      },
+      {
+        property: "og:description",
+        content:
+          "Manual digital com 100 truques de mágica explicados passo a passo + 4 bônus grátis. Aprenda em minutos e impressione qualquer pessoa.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="mx-auto min-h-screen max-w-md">
+      <ScarcityBanner />
+      <main>
+        <Hero />
+        <Benefits />
+        <Inside />
+        <WhyBuy />
+        <Feedbacks />
+        <Bonuses />
+        <Offers />
+        <Guarantee />
+        <Faq />
+      </main>
+      <Footer />
     </div>
   );
 }
