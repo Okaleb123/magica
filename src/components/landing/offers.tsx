@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
-import { Check, Crown, Loader2, PartyPopper, X } from "lucide-react";
+import { Check, Crown, Loader2, Minus, PartyPopper } from "lucide-react";
 import { SectionTitle, Tag } from "./shared";
 
 type ModalState = "closed" | "loading" | "discount";
@@ -57,16 +57,16 @@ export function Offers() {
             Manual com 100 truques passo a passo
           </p>
           <ul className="mt-3 flex flex-col gap-1.5">
-            <li className="flex items-start gap-2 text-sm">
+            <li className="flex items-start gap-2 text-sm font-medium">
               <Check className="mt-0.5 h-4 w-4 shrink-0 text-cta" />
               <span>Manual com 100 truques passo a passo</span>
             </li>
             {iscaMissing.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-2 text-sm text-muted-foreground"
+                className="flex items-center gap-2 text-xs text-muted-foreground/40"
               >
-                <X className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+                <Minus className="h-3.5 w-3.5 shrink-0 opacity-40" />
                 <span className="line-through">{item}</span>
               </li>
             ))}

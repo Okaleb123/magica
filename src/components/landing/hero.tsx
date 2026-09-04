@@ -1,6 +1,6 @@
 import { Zap } from "lucide-react";
 import heroMockup from "@/assets/hero-mockup.png";
-import { CtaButton, Placeholder } from "./shared";
+import { CtaButton } from "./shared";
 
 export function ScarcityBanner() {
   return (
@@ -15,12 +15,7 @@ export function ScarcityBanner() {
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center gap-5 px-5 pb-10 pt-10 text-center">
-      <Placeholder
-        ratio="h-14 w-14 !rounded-xl"
-        label="Logo"
-        className="!flex-row gap-1"
-      />
+    <section className="flex flex-col items-center gap-5 px-5 pb-10 pt-8 text-center">
       <h1 className="text-balance font-display text-3xl font-extrabold leading-[1.1]">
         100 Truques de Mágica <span className="text-gold">Passo a Passo</span>{" "}
         Para Impressionar Qualquer Pessoa

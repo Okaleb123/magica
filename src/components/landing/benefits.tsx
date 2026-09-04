@@ -1,5 +1,12 @@
 import { Sparkles, Clock, House, TrendingUp, Users, Smartphone } from "lucide-react";
-import { Placeholder, SectionTitle, Tag } from "./shared";
+import { SectionTitle } from "./shared";
+import inside1 from "@/assets/inside-1.png";
+import inside2 from "@/assets/inside-2.png";
+import inside3 from "@/assets/inside-3.png";
+import inside4 from "@/assets/inside-4.png";
+import inside5 from "@/assets/inside-5.png";
+
+const insideImages = [inside1, inside2, inside3, inside4, inside5];
 
 const benefits = [
   {
@@ -59,9 +66,14 @@ export function Inside() {
         />
       </div>
       <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 no-scrollbar">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="w-[62%] shrink-0 snap-center">
-            <Placeholder ratio="aspect-[9/16]" label={`Página ${i} · 9:16`} />
+        {insideImages.map((img, i) => (
+          <div key={i} className="w-[68%] shrink-0 snap-center">
+            <img
+              src={img}
+              alt={`Página do manual ${i + 1}`}
+              className="w-full rounded-2xl border object-cover shadow-lg"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
@@ -92,8 +104,7 @@ export function WhyBuy() {
     <section className="px-5 py-10">
       <SectionTitle title="Por que adquirir agora?" />
       <div className="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/10 to-card p-6">
-        <Tag>Promessa real</Tag>
-        <h3 className="mt-3 font-display text-xl font-extrabold leading-snug">
+        <h3 className="font-display text-xl font-extrabold leading-snug">
           Em 7 dias você já estará fazendo mágicas que ninguém consegue
           explicar
         </h3>
