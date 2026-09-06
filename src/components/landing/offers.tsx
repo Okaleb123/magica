@@ -74,12 +74,16 @@ export function Offers() {
           <p className="mt-3 font-display text-3xl font-extrabold">
             R$ 10<span className="text-sm font-bold">,00</span>
           </p>
-          <button
-            onClick={openIsca}
-            className="checkout mt-4 w-full rounded-2xl border border-input bg-secondary py-3.5 font-display text-sm font-extrabold uppercase tracking-wide transition-colors hover:bg-accent"
+          <a
+            href="https://pay.cakto.com.br/3caasrk"
+            onClick={(e) => {
+              e.preventDefault();
+              openIsca();
+            }}
+            className="checkout mt-4 block w-full rounded-2xl border border-input bg-secondary py-3.5 text-center font-display text-sm font-extrabold uppercase tracking-wide transition-colors hover:bg-accent"
           >
             Quero o essencial
-          </button>
+          </a>
         </div>
 
         {/* Oferta premium */}
@@ -115,7 +119,7 @@ export function Offers() {
             <Tag>-80% hoje</Tag>
           </div>
           <a
-            href="#ofertas"
+            href="https://pay.cakto.com.br/jpr2icx_1088653"
             className="checkout mt-4 block w-full rounded-2xl bg-cta py-4 text-center font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground shadow-[0_6px_24px_-6px] shadow-cta/50 transition-transform active:scale-95"
           >
             Quero o premium
@@ -147,17 +151,17 @@ export function Offers() {
                 R$ 17,90
               </p>
               <a
-                href="#ofertas"
+                href="https://pay.cakto.com.br/edthtyq"
                 className="checkout mt-2 block w-full rounded-2xl bg-cta py-4 font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground transition-transform active:scale-95"
               >
                 Aceitar desconto
               </a>
-              <button
-                onClick={() => setModal("closed")}
-                className="text-xs font-semibold text-muted-foreground underline underline-offset-2"
+              <a
+                href="https://pay.cakto.com.br/3caasrk"
+                className="checkout text-xs font-semibold text-muted-foreground underline underline-offset-2"
               >
                 Não, obrigado
-              </button>
+              </a>
             </div>
           )}
         </div>
