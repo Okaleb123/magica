@@ -76,7 +76,7 @@ export function Offers() {
           </p>
           <button
             onClick={openIsca}
-            className="mt-4 w-full rounded-2xl border border-input bg-secondary py-3.5 font-display text-sm font-extrabold uppercase tracking-wide transition-colors hover:bg-accent"
+            className="checkout mt-4 w-full rounded-2xl border border-input bg-secondary py-3.5 font-display text-sm font-extrabold uppercase tracking-wide transition-colors hover:bg-accent"
           >
             Quero o essencial
           </button>
@@ -116,7 +116,7 @@ export function Offers() {
           </div>
           <a
             href="#ofertas"
-            className="mt-4 block w-full rounded-2xl bg-cta py-4 text-center font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground shadow-[0_6px_24px_-6px] shadow-cta/50 transition-transform active:scale-95"
+            className="checkout mt-4 block w-full rounded-2xl bg-cta py-4 text-center font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground shadow-[0_6px_24px_-6px] shadow-cta/50 transition-transform active:scale-95"
           >
             Quero o premium
           </a>
@@ -148,7 +148,7 @@ export function Offers() {
               </p>
               <a
                 href="#ofertas"
-                className="mt-2 block w-full rounded-2xl bg-cta py-4 font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground transition-transform active:scale-95"
+                className="checkout mt-2 block w-full rounded-2xl bg-cta py-4 font-display text-base font-extrabold uppercase tracking-wide text-cta-foreground transition-transform active:scale-95"
               >
                 Aceitar desconto
               </a>

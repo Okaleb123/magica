@@ -21,7 +21,7 @@ export function CtaButton({
   return (
     <a
       href={href}
-      className={`block w-full rounded-2xl bg-cta px-6 py-4 text-center font-display text-lg font-extrabold uppercase tracking-wide text-cta-foreground shadow-[0_6px_24px_-6px] shadow-cta/50 transition-transform active:scale-95 ${className}`}
+      className={`checkout block w-full rounded-2xl bg-cta px-6 py-4 text-center font-display text-lg font-extrabold uppercase tracking-wide text-cta-foreground shadow-[0_6px_24px_-6px] shadow-cta/50 transition-transform active:scale-95 ${className}`}
     >
       {children}
     </a>
